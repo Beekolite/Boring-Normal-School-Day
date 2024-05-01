@@ -1,0 +1,777 @@
+import random
+
+reputation = 0
+homework = 0
+mentality = 0
+
+# Day Events
+def day_event_1():
+  global reputation
+  global mentality
+  questionnum = random.randint(0,2)    
+  print("\nDuring a lesson, you are asked to answer a question:")
+  if questionnum == 0:
+    while True:
+      question = input("What year was the Yalta Agreement was signed? \n A. 1948 \n B. 1945 \n C. 1947 \n D. 1946 \nYour answer: ")
+      if question == "B" or question == "B." or question == "b." or question == "b":
+        reputation += 3
+        mentality -= 1
+        print("\nWell done! Your memory is still serving you well.\n")
+        break
+      elif question == "A" or question == "A." or question == "a." or question == "a" or question == "C" or question == "C." or question == "c." or question == "c" or question == "D" or question == "D." or question == "d." or question == "d":
+        reputation -= 1
+        mentality -= 1
+        print("\nToo bad, wrong choice. Now people may laugh at your foolishness.\n") 
+        break
+      else:
+        print("\nPlease input the valid options")
+
+  if questionnum == 1:
+    while True:
+      question = input("What is 2*500 + (600 - (2*130 + 3)) ?: ")
+      if question == "1337" or question == "1,337" or question == "1 337":
+        reputation += 0
+        mentality -= 0
+        print("\nWell done! Let's be real here, You probably used a calculator.\n")
+        break
+      if question == "":
+        print("\nDon't just leave a blank answer! Do somthing!")
+      else:
+        reputation -= 0
+        mentality -= 2
+        print("\nWrong \ndO yOU NoT hAVe A cALcUlatOR?\n") 
+        break
+
+  if questionnum == 2:
+      while True:
+        question = input("What is the SI Unit of temperature? \nYour answer: ")
+        if question == "K" or question == "Kelvin":
+          reputation += 2
+          mentality += 2
+          print("\nWell done! \n... actually, that's a easy trick question everyone knows. At least you can show how 'smart' you are.\n")
+          break
+        if question == "":
+          print("\nDon't just leave a blank answer! Do somthing!")
+        else:
+          reputation -= 0
+          mentality -= 1
+          print("\nWrong \nIt's always been Kelvin, not Celcius! Or Fahrenheit!\n") 
+          break
+
+# Day Event 2    
+def day_event_2():
+  global reputation
+  global mentality
+  while True:
+    print("\nDuring a lesson, you're feeling sleepy. What will you do?")
+    question = input("A. Continue to sleep\nB. Ask to go to the toilet\nC. Try to wake up\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      reputation -= 1
+      mentality -= 0
+      print("You soon fell asleep into your dreams. Suddenly someone slammed your table.\nYou awoke sleepily and saw the most menacing face you've ever seen in your life.\n The teacher is staring directly into your soul. \n\nScary.\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      reputation -= 0
+      mentality += 1
+      print("\nYou sleepily asked to go wash your face. You somehow feel fresher than before walking out of that toilet. \nSomehow by splashing a hand of water on your face.\n")
+      break
+    if question == "C" or question == "C." or question == "c." or question == "c":
+      reputation -= 1
+      mentality -= 2
+      print("\nYou tried to use 'Wake Up', but its not effective!\nYou fell asleep!")
+      print("\n... suddenly someone slammed your table.\nYou awoke sleepily and saw a menacing face.\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#Day Event 3
+def day_event_3():
+  global reputation
+  global mentality
+  while True:
+    print("\nYour table partner is tapping on your shoulder during lessontime. They seem to want to talk to you, from their expression. What will you do?")
+    question = input("A. Talk to them\nB. Ignore\nC. Tell them to be quiet\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      reputation -= 1
+      mentality -= 1
+      print("\nYou and your friend started to talk to each other, and soon enough the both of you got too engrossed in your mini-talk that everyone was staring at both of you.\n\nDon't worry, y'all are sharing your interest! After all, sharing is caring, right?\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      reputation -= 2
+      mentality -= 0
+      print("\nIgnorance is a mistake.\nNow they'll not only be upset, they may go around telling other how you're not fun at all!\n")
+      break
+    if question == "C" or question == "C." or question == "c." or question == "c":
+      print("\nYou told them to do it later. That person sighed. At least that conversation could happen later.\n")
+      break
+    else:
+      print("\nPlease input the valid options")
+
+#Day Event 4
+def day_event_4():
+  global mentality
+  while True:
+    print("\nYou're getting bored of this lesson already, and in that pocket lies your treasure - the phone. Will you give in to temptation?")
+    question = input("A. Yes\nB. Nah\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      print("\nAnd so you did, and with that you secretly used your phone.")
+      while True:
+        question2 = input("\nYour phone seem to have some new notifications. Wanna check it?\nA. Yes\nB. Nah\nYour choice: ")
+        if question2 == "A" or question2 == "A." or question2 == "a." or question2 == "a":
+          mentality -= 690
+          print("\nAnd so you did, and with that, some music blasted out of it because you forgot to turn the sound off. You know what happens next.\n \nAnd so you did, your phone is sacrificed to the Demerit Idol, and you suffered a lot of emotional damage.\n")
+          break
+        if question2 == "B" or question2 == "B." or question2 == "b." or question2 == "b":
+          print("\nYou resisted the temptation... for now...\n")
+          break
+        else:
+          print("Please input the valid options")
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      print("\nYou resisted that temptation, and decided that you won't want your phone to be sacrificed tonight.\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#Day Event 5
+def day_event_5():
+  global reputation
+  global mentality
+  while True:
+    print("\nYou have a mock test today, somehow you aren't prepared for it despite having a week to prepare for it.\n \nYou turn to see your table partner who seems to be breezing through this paper. What will you do?")
+    question = input("A. Cheat!\nB. Don't Cheat\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      print("\nYou decided to dart your eyes towards the paper. But the paper's contents seem so blurry! You can't see the answers that easily!\n")
+      while True:
+        question2 = input("\nWanna extend your head a bit further?\nA. Yes\nB. Nah\nYour choice: ")
+        if question2 == "A" or question2 == "A." or question2 == "a." or question2 == "a":
+          reputation -=3
+          mentality -= 3
+          print("\nYou peaked your head just a little bit more, and a bit more...\n \nBOOM! As you looked up, you know it's game over.\n \nNow get ready for a long discipline talk.\n")
+          break
+        if question2 == "B" or question2 == "B." or question2 == "b." or question2 == "b":
+          print("\nYou decided it'll be best to not peek. Perhaps this will be a lesson...\n")
+          break
+        else:
+          print("Please input the valid options")
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      print("\nYou decided that despite the probably poor results, you'll not die a coward - or rather, a cheat.\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#Day Event 6
+def day_event_6():
+  global reputation
+  global homework
+  global mentality
+  number = random.randint(0,2)
+  while True:
+    if number == 0:
+      print("\nToday you received one of your mock papers, and you didn't do that bad, but there are still corrections to do. What do you want to do?")
+      question = input("A. Leave them be\nB. Do them \nYour choice: ")
+      if question == "A" or question == "A." or question == "a." or question == "a":
+        homework += 2
+        mentality -= 1
+        print("\nSlacking off, you decided to not do them despite the teacher going through the corrections. Well, that means more homework to do~~\n")  
+        break
+      if question == "B" or question == "B." or question == "b." or question == "b":
+        homework -= 2
+        print("\nYou decide to do all the corrections that occured. Good for you, as that means there is less homework to worry about!\n")
+        break
+      else:
+        print("Please input the valid options")
+    if number == 1:
+      print("\nToday you received one of your mock papers, BUT YOU DID TERRIBLY!\nThere is a lot of corrections to do. What do you want to do?")
+      mentality -=3
+      question = input("A. Leave them be\nB. Do them \nYour choice: ")
+      if question == "A" or question == "A." or question == "a." or question == "a":
+        homework += 3
+        mentality -= 1
+        print("\nSlacking off, you decided to not do them despite the teacher going through the corrections and your failure. Well, that means more stress to deal with~~\n")  
+        break
+      if question == "B" or question == "B." or question == "b." or question == "b":
+        print("\nYou decide to do all the corrections that occured. Good for you, as that means there is less homewrok to worry about!\n \nDespite needing a lot of your green pen's ink.\n")
+        break
+      else:
+        print("Please input the valid options")
+    if number == 2:
+      mentality += 1
+      print("\nToday you received one of your mock papers, and you magically socred full marks. What do you wanna do?")
+      question = input("A. Be silent\nB. Announce it to the world \nYour choice: ")
+      if question == "A" or question == "A." or question == "a." or question == "a":
+        print("\nSometimes staying silent is the best option. It doesn't mean much, as you know there are more mock papers to worry about.\n")  
+        break
+      if question == "B" or question == "B." or question == "b." or question == "b":
+        reputation -= 2
+        mentality -=1
+        print("\nYour inner primal instincts overtake your body, making you announce your victory to everyone in the class.\n...except no one is impressed by it. And now you look like a fool.\n")
+        break
+      else:
+        print("Please input the valid options")
+
+#Day Event 7
+def day_event_7():
+  global reputation
+  global homework
+  global mentality
+  while True:
+    print("\nDuring your lab lesson, you realise that you're running out of time to finish you lab-work! Maybe you took your sweet time preparing all of those chemicals!\n \nNo matter, what will you do?")
+    question = input("A. Hastily try to rush it\nB. Copy from other people\nC. Take your sweet time~~\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      reputation += 1
+      homework += 3
+      mentality -= 2
+      print("\nAs you tried to rush your work, you broke a burette!\n \nNow your classmates stare at your mistake and you ended up wasting more time than needed.\n \nWell, at least your classmates have a nickname for you - 'The Burette Slayer'.\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      print("\nYou asked to copy from your table partner, which they agree to. Luckily, nothing bad happened.\n")
+      break
+    if question == "C" or question == "C." or question == "c." or question == "c":
+      homework += 3
+      print("\nYou still take your time?! Well, that means more incomplete lab-work to be completed later!\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#Day Event 8
+def day_event_8():
+  global reputation
+  global mentality
+  while True:
+    print("\nToday is your best friend's birthday! Will you sing a 'Happy Birthday' song when your teacher isn't around?")
+    question = input("A. Yes\nB. No\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      reputation += 2
+      mentality += 2
+      print("\nYou decided to do just that, and your friend's expression changed from a surprised look to one with a warm smile.\n \nSeeing the smile plastered on their face, you can't help but smile too.\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      mentality -=1
+      print("\nYou decided to do just that, but deep inside, you feel a little but guilty. And perhaps, a tinge of regret.\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#Day Event 9
+def day_event_9():
+  global reputation
+  global homework
+  global mentality
+  while True:
+    print("\nDuring sometime in your lesson, the teacher didn't come to school! That only occurs once in a blue moon, and you want to make use of this time!\n \nThis is a free period! What will you do?")
+    question = input("A. Do homework\nB. Play card games\nC. Sleep\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      homework -=2
+      print("\nYou decided to do your homework, and perhaps a little extra work. That means less homework to stress you later on!\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      reputation += 2
+      print("\nWell, playing your favourite card game is an option, and you absolutely managed to sweep the game!\nYour classmates look at you, wondering what kind of beast you are.\n")
+      break
+    if question == "C" or question == "C." or question == "c." or question == "c":
+      mentality +=2
+      print("\nA good sleep will replenish the body, so I suppose it doens't hurt to sleep...\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#Day Event 10
+def day_event_10():
+  global homework
+  global mentality
+  while True:
+    print("\nAt this point of time, next lesson's teacher isn't here yet. But you know she'll be coming in 5 minutes. However, you feel as if something feels off... \nIT'S HER HOMEWORK!!!\n \nWhat will you do?")
+    question = input("A. Do homework\nB. Don't do\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      homework -= 1
+      mentality -= 2
+      print("\nAs you rushed your homework within the next 5 minutes, you feel your mind slowly but surely deteriorating.\n By the last minute, your homework has been completed\n \nBut at what cost? When all the work looks like a pile of garbage piled up together.\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      homework += 2
+      print("\nYou really wish to embrace your fate of being scolded by the teacher whose homework you owe.\n...no comments.\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#--------------------------------------------------------#
+#Canteen Event 1
+def Canteen_event_1():
+  global reputation
+  global homework
+  global mentality
+  while True:
+    print("\nYour friends invited you to play some sports with them. Wanna join in?")
+    question = input("A. Yes\nB. No\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      reputation += 2
+      mentality += 1
+      print("\nYou and your friends enjoyed a game of sports together.\n \nRegardless of the outcome, you had a blast over there. You not only showed off your skills, you also felt great by the end of it all.\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      print("\nYou decided against the idea of joining them.\nHaven't you heard that 'the more the merrier'?\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#Canteen Event 2
+def Canteen_event_2():
+  global mentality
+  while True:
+    print('\n"Growl~~"\nThat familiar sound... a part of you really craves for that food just because you are hungry.\nWhat do you want to do?')
+    question = input("A. Eat\nB. Don't eat\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a": 
+      mentality +=1
+      print("\nAs you got your food to eat, you feel the stomach's growling die down.\nWith your stomach satisfied, you feel a bit refreshed.\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      print("\nIgnoring the pleas of your stomach, you resisted the temptation to eat.\nThis may be inconsequential, or may have severe effects on your body later on...\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#Canteen Event 3
+def Canteen_event_3():
+  global homework
+  global mentality
+  while True:
+    print("\nJust as you're about to do anything for recess, you remembered something...\n \nHOMEWORK THAT'S DUE TODAY!!!\n \nWhat will you do?")
+    question = input("A. Do homework\nB. Don't do\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      homework -= 1
+      mentality -= 1
+      print("\nAs you rushed your homework within the 30 minute-ish period, you feel your mind slowly but surely getting tired.\n By the end of recess, your homework has been completed...\n \n...but at what cost?\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      homework += 2
+      print("\nYou really wish to embrace your fate of being scolded by the teacher whose homework you owe.\n...no comments.\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#Canteen Event 4
+def Canteen_event_4():
+  global mentality
+  while True:
+    print("\nEven as the school bell rang, you feel quite sleepy from the probably long and tiring lessons.\nIf you wish to sleep, now will be a good time to do so.\n \nSo, what is your decision?\n")
+    question = input("A. Sleep\nB. Don't sleep\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      mentality += 2
+      print("\nYou think that this will help you, and before you know it, your head lied on the table as you drifted off~~\n \nSoon, you found yourself feeling much better...\n...at the price of your recess.\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      print("\nHA! Caught you!\nThought you wanted to stay awake? Well too bad! \nYou went out like a light before you knew it!\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#--------------------------------------------------------#
+#After School Event 1
+def AS_event_1():
+  global reputation
+  global mentality
+  while True:
+    print("\nAfter school, you see some of your friends playing a mobile game together.\nWant to join them?")
+    question = input("A. Yes\nB. No\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      reputation += 1
+      mentality += 1
+      print("\nAfter asking to join, you showed off your skills as much as possible. Some of which impressed your friends. Perhaps you may have left a mark in their memories\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      print("\nYou didn't join them. Perhaps you didn't like the game, perhaps the group is too full, or whatever the reason is.\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#After School Event 2
+def AS_event_2():
+  global reputation
+  global mentality
+  while True:
+    print("\nSome of your friends wish to go to the gym today, and are inviting you to join them into the fun.\nWanna tag along?")
+    question = input("A. Yes\nB. No\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      reputation += 1
+      mentality += 2
+      print("\nTagging along, you and your friends entered the gym to train you body up. You felt tired by the end of it all, but you feel very satisfied.\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      print("\nUnfortunately, the gym didn't appeal to you for whatever reason. Maybe your body just isn't ready.\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#After School Event 4
+def AS_event_4():
+  global reputation
+  global mentality
+  while True:
+    print("\nYou have an after school activity that you need to attend. But a part of you doesn't want to go for that activity. Want to skip?")
+    question = input("A. Skip it!\nB. Don't Skip\nC. Another option?\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      mentality += 2
+      print("\nYou felt that you have better things to do tonight than your school activity.\n \n...why did you even join this activity if it doesn't interest you at all though?\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      reputation += 2
+      print("\nGoing with your heart, you decided to go for that activity. You may not like it, but you are probably awarded for your dedication.\n")
+      break
+    if question == "C" or question == "C." or question == "c." or question == "c":
+      while True:
+        print("\nAnother option is to not fully do that activity and leave halfway.\n \nDuring the activity, you remembered that you wanted to leave halfway. Want to leave?")
+        question2 = input("A. Yes!\nB. Nah.\nYour choice: ")
+        if question2 == "A" or question2 == "A." or question2 == "a." or question2 == "a":
+          mentality += 1
+          reputation += 1
+          print("\nWell, at least you did what you waanted to do. Which is to leave the session earlier. That means more free time for yourself.\n")  
+          break
+        if question2 == "B" or question2 == "B." or question2 == "b." or question2 == "b":
+          mentality -= 1
+          print("\nYou felt that you have better things to do in your school activity.\n \n...THEN WHY DID YOU HAVE THAT IDEA OF LEAVING HALFWAY IF YOU'RE NOT DOING IT?!?!\n")  
+          break
+        else:
+          print("Please input the valid options")
+      break
+    else:
+      print("Please input the valid options")
+
+#After School Event 5
+def AS_event_5():
+  global homework
+  global mentality
+  questionnum = random.randint(0,2)
+  while True:
+    print("\nJust as you thought you can do whatever after school activity you desired, you remembered you have those annoying homework that you got to do. \n \nWhat do you want to do with that stack of work?")
+    question = input("A. Do them\nB. Nah lazy\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      homework -= 2
+      if questionnum == 0:
+        while True:
+          question2 = input("\nIn the equation of 4OH^- -> 2(H2O) + O2 + 4e^-:\nIs oxygen reduced or oxidised? \n A. Reduced \n B. Oxidised \nYour answer: ")
+          if question2 == "A" or question2 == "A." or question2 == "a." or question2 == "a":
+            mentality += 1
+            print("\nYou stare at your answer. It was that easy, wasn't it?\n")
+            break
+          elif question2 == "B" or question2 == "B." or question2 == "b." or question2 == "b":
+            print("\nYou stare at your answer. You pray your teacher has mercy on your work.\n") 
+            break
+          else:
+            print("\nPlease input the valid options")
+
+      if questionnum == 1:
+        while True:
+          question2 = input("\nWhat is 612 + 4859 - ((56*56) - 45) ?: ")
+          if question2 == "2380" or question2 == "2,380" or question2 == "2 380":
+            print("\nLet's be real here, You probably used a calculator.\n")
+            break
+          if question2 == "":
+            print("\nDon't just leave a blank answer! Do somthing!")
+          else:
+            mentality -= 1
+            print("\ndO yOU NoT hAVe A cALcUlatOR?\n") 
+            break
+
+      if questionnum == 2:
+          while True:
+            question2 = input("\nWhich country has the highest GDP? \nYour answer: ")
+            if question2 == "USA" or question2 == "United States of America" or question2 == "usa" or question2 =="us" or question2 =="US" or question2 =="America" or question2 =="america" or question2 == "U.S.A." or question2 == "U.S.A"  or question2 == "united states of america":
+              print("\nThat's a easy trick question everyone knows. I'll be laughing at you for not knowing.\n")
+              break
+            if question2 == "":
+              print("\nDon't just leave a blank answer! Do somthing!")
+            else:
+              mentality -= 1
+              print("\nRead the news kid\n") 
+              break
+
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      homework += 2
+      print("\nWell, your laziness decided to not do your homework in school. That means more homework at home! \n \nFun!\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#--------------------------------------------------------#
+#Home Event 1
+def home_event_1():
+  global homework
+  global mentality
+  questionnum = random.randint(0,2)
+  while True:
+    print("\nIt seems like your teachers have given you some homework to complete. Do you want to complete them?")
+    question = input("A. Sure\nB. Nuh uh\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      homework -= 3
+      if questionnum == 0:
+        while True:
+          question2 = input("\nPhotosynthesis is where oxygen and glucose is produced from the human due from carbon dioxide, water and sunlight. Is this statement true or false? \n A. True \n B. False \nYour answer: ")
+          if question2 == "B" or question2 == "B." or question2 == "b." or question2 == "b":
+            mentality += 1
+            print("\nAmazing! Your memory is still functional at least!\n")
+            break
+          elif question2 == "A" or question2 == "A." or question2 == "a." or question2 == "a":
+            print("\nNuh uh, human's wont need to eat if we can produce our own food.\nPray that your teacher won't notice this mistake of yours.") 
+            break
+          else:
+            print("\nPlease input the valid options")
+
+      if questionnum == 1:
+        while True:
+          question2 = input("\nJohn bought 6 boxes of apples. Each box costs $10, excluding the 9% GST. What is the total amount of money John spent, with the 9% GST applied?\nRemove all mentions of $ or 'dollars' in your answer.\n \nYour answer: $")
+          if question2 == "65.4" or question2 == "65.40":
+            print("\nWell done! You probably relied on your calculator too!\n")
+            break
+          if question2 == "":
+            print("\nDon't leave it blank! Do something!")
+          else:
+            mentality -= 1
+            print("\nYou stared at your answer, unaware that you'll be given a cross soon for not using your calculator...\n") 
+            break
+
+      if questionnum == 2:
+          while True:
+            question2 = input("\nHow many countries are in the United Nations (U.N.) as of the end of 2023? : ")
+            if question2 == "193":
+              print("\nI'm pretty sure you Googled that up, didn't you?\n \nDon't lie, I know you would.\n")
+              break
+            if question2 == "":
+              print("\nDon't just leave a blank answer! Do somthing!")
+            else:
+              mentality -= 1
+              print("\nWell, at least I can guess that you didn't Google it up!\n") 
+              break
+
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      homework += 2
+      print("\nYou felt lazy to do a single piece of homework. What a shame, as you know you'd be busier next time.\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#Home Event 2
+def home_event_2():
+  global reputation
+  global homework
+  global mentality
+  while True:
+    print("\nYou feel extremely bored, and you want to do something to not bore you out.\nLooking at your iPad, you wonder to yourself...\nShould you use it?")
+    question = input("A. Yes\nB. Nah\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      mentality += 1
+      print("\nYou opened your iPad to be... scolling through social media?!\nThat has to be one of the most boring things ever in the entire world!\n \nSomehow, you still found enjoyment in it...\n \nfor whatever reason.\n")
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      print("\nYou put your iPad away, either because you're just too tired of looking at it, or may be you just don't want to witness brain-rot in those websites.\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#Home Event 3
+def home_event_3():
+  global reputation
+  global homework
+  global mentality
+  while True:
+    print("\nResting the the sofa, a part of you feel like your body is ready to do some exercises. However, another part of you just wants you be a pig.\nWhat do you want to do?")
+    question = input("A. Pig Around!\nB. Exercise!\nYour choice: ")
+    if question == "A" or question == "A." or question == "a." or question == "a":
+      mentality += 1
+      print("\nYour body definitely wasn't ready. Perhaps a few more motivation will help! Let's give you one:\nGET IN HERE AND EXERCISE OR ELSE...\n")  
+      break
+    if question == "B" or question == "B." or question == "b." or question == "b":
+      mentality += 2
+      print("\nYou felt prepared to exercise. As you got down from the couch, you did serveral exercises that hopefully trains your body up to be better.\nYou got to imagine this: What if you don't ever exercise in your lifetime?\n \nWould you grow so big that your body fats equates to the circumference of the Black Hole?\n")
+      break
+    else:
+      print("Please input the valid options")
+
+#--------------------------------------------------------#
+def main():
+  global day
+  global mentality
+  global reputation
+  global homework
+  day += 1
+  print("\n#----------------------------------------------#")
+  if day == 1:
+    print("\nWelcome to school! Ready to start your day?")
+  elif day >= 1:
+    print("\nWelcome to school again! Ready for some more?\n")
+  print("\n#----------------------------------------------#")
+  print("~ Day {} ~".format(day))
+  print("#----------------------------------------------#\n")
+  dayvalue = 0
+  print("\nRing~~\nThe school bell rang, signalling the start of a new day ahead.\nWhat shenanigenns will you encounter?")
+  while dayvalue < 3:
+    day_event_value = random.randint(0,9)
+    if day_event_value == 0:
+      dayvalue+=1
+      print("\nDay Event {}".format(dayvalue))
+      day_event_1()
+    if day_event_value == 1:
+      dayvalue+=1
+      print("\nDay Event {}".format(dayvalue))
+      day_event_2()
+    if day_event_value == 2:
+      dayvalue+=1
+      print("\nDay Event {}".format(dayvalue))
+      day_event_3()
+    if day_event_value == 3:
+      dayvalue+=1
+      print("\nDay Event {}".format(dayvalue))
+      day_event_4()
+    if day_event_value == 4:
+      dayvalue+=1
+      print("\nDay Event {}".format(dayvalue))
+      day_event_5()
+    if day_event_value == 5:
+      dayvalue+=1
+      print("\nDay Event {}".format(dayvalue))
+      day_event_6()
+    if day_event_value == 6:
+      dayvalue+=1
+      print("\nDay Event {}".format(dayvalue))
+      day_event_7()
+    if day_event_value == 7:
+      dayvalue+=1
+      print("\nDay Event {}".format(dayvalue))
+      day_event_8()
+    if day_event_value == 8:
+      dayvalue+=1
+      print("\nDay Event {}".format(dayvalue))
+      day_event_9()
+    if day_event_value == 9:
+      dayvalue+=1
+      print("\nDay Event {}".format(dayvalue))
+      day_event_10()
+
+  print("\nRecess Period!\n \n \nAnd just like that, the first few periods flew by quickly.\nAs the school bell rang to signal the start of recess... ")
+  Canteen_event_value = random.randint(0,3)
+  if Canteen_event_value == 0:
+    Canteen_event_1()
+  elif Canteen_event_value == 1:
+    Canteen_event_2()
+  elif Canteen_event_value == 2:
+    Canteen_event_3()
+  elif Canteen_event_value == 3:
+    Canteen_event_4()
+
+
+  dayvalue1 = 0
+  print("\nRing~~\nThe school bell rang, signalling the start of a new day ahead.\nWhat shenanigenns will you encounter?")
+  while dayvalue1 < 3:
+    day_event_value1 = random.randint(0,9)
+    if day_event_value1 == 0:
+      dayvalue1+=1
+      print("\nPost Recess Event {}".format(dayvalue1))
+      day_event_1()
+    if day_event_value1 == 1:
+      dayvalue1+=1
+      print("\nPost Recess Event {}".format(dayvalue1))
+      day_event_2()
+    if day_event_value1 == 2:
+      dayvalue1+=1
+      print("\nPost Recess Event {}".format(dayvalue1))
+      day_event_3()
+    if day_event_value1 == 3:
+      dayvalue1+=1
+      print("\nPost Recess Event {}".format(dayvalue1))
+      day_event_4()
+    if day_event_value1 == 4:
+      dayvalue1+=1
+      print("\nPost Recess Event {}".format(dayvalue1))
+      day_event_5()
+    if day_event_value1 == 5:
+      dayvalue1+=1
+      print("\nPost Recess Event {}".format(dayvalue1))
+      day_event_6()
+    if day_event_value1 == 6:
+      dayvalue1+=1
+      print("\nPost Recess Event {}".format(dayvalue1))
+      day_event_7()
+    if day_event_value1 == 7:
+      dayvalue1+=1
+      print("\nPost Recess Event {}".format(dayvalue1))
+      day_event_8()
+    if day_event_value1 == 8:
+      dayvalue1+=1
+      print("\nPost Recess Event {}".format(dayvalue1))
+      day_event_9()
+    if day_event_value1 == 9:
+      dayvalue1+=1
+      print("\nPost Recess Event {}".format(dayvalue1))
+      day_event_10()
+
+  ASvalue = 0
+  print('\n"Ring~~"\nAs the school bell rang, it signals the end of the school day.\n \nWhat shenanigens could happen after school?\n')
+  while ASvalue <2:
+    AS_event_value = random.randint(0,4)
+    if AS_event_value == 0:
+      ASvalue+=1
+      print("\nAfter School Event {}".format(ASvalue))
+      AS_event_1()
+    if AS_event_value == 1:
+      ASvalue+=1
+      print("\nAfter School Event {}".format(ASvalue))
+      AS_event_2()
+    if AS_event_value == 3:
+      ASvalue+=1
+      print("\nAfter School Event {}".format(ASvalue))
+      AS_event_4()
+    if AS_event_value == 4:
+      ASvalue+=1
+      print("\nAfter School Event {}".format(ASvalue))
+      AS_event_5()
+
+  print("\nAfter a while, you've returned to your home. It's often a better place than your school, as it is more private, safer, and all that great stuff.")
+  home_event_value = random.randint(0,2)
+  if home_event_value == 0:
+    home_event_1()
+  if home_event_value == 1:
+    home_event_2()
+  if home_event_value == 2:
+    home_event_3()
+
+  print("\nSoon, it is your time to sleep.\nAs you fall into the deep slumber, will tomorrow's events play out the same way?\n")
+
+  total =  mentality + reputation - (homework*0.55)
+  if total > 10:
+    print("\nRESULTS:\nWell done, your day has been pretty good!\n")
+  elif total < -600:
+    print("\nRESULTS:\nHow was a day without your handphone?\n")
+  elif total >= 0 and total <=3:
+    print("\nRESULTS:\nYour day has been quite quiet, give it some life!\n")
+  elif total <0 and total >= -100:
+    print("\nRESULTS:\nDon't worry, your day will be better next time.\n")
+  elif total >3 and total <=6:
+    print("\nRESULTS:\nYour day has been decent, but there are several improvements you can do to make your day better!\n")
+  elif total >6 and total <10:
+    print("\nRESULTS:\nYour day seems to be not bad, keep it up!\n")
+
+
+def REPLAY():
+  global mentality
+  global reputation
+  global homework
+  while True: 
+    replay = input("\nAnother day?\nA.Yes\nB.No\nYour choice: ")
+    if replay == "A" or replay == "A." or replay == "a." or replay == "a" or replay == "Yes" or replay == "Y" or replay == "yes" or replay == "y":
+      reputation = 0
+      homework = 0
+      mentality = 0
+      main()
+    elif replay == "B" or replay == "B." or replay == "b." or replay == "b" or replay == "No" or replay == "N" or replay == "n" or replay == "no":
+      print("\nWell, it must've gotten boring really fast.\n \nSee you next time!")
+      break
+    else:
+      print("Please input the valid options")
+
+
+day = 0
+main()
+REPLAY()
